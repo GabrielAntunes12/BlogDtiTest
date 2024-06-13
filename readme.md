@@ -6,7 +6,7 @@ Esse aplicativo foi desenvolvido a fins de concluir um teste exigido.
  - Caso a escolha for a API em GoLang, ler o readme dentro da pasta API, para executar a aplicação do Go no localhost para a API estar disponivel em seu ambiente, para prosseguir com o fluxo no app.
  - Caso a escolha for a API Mockada, continuar normalmente no fluxo do app.
  - Sempre que o usúario desejar trocar de API, é necessario matar o APP e abri-lo, foi retirada a tela inicial de decisão da pilha, para o usúario ter uma experiencia apenas do blog, pois a tela é um plus para o teste.
- - Quando tiver alteração por escolha do usúario, se criar uma lista da api mockada, sempre quando fechar e abrir o app e a escolha for mockada, a lista permanecerá, mas a partir do momento onde é clicada para a API Rest, o mockado sumirá, para mitigar danos de conflito no SharedPreferences.
+ - Quando tiver alteração por escolha do usúario, se criar uma lista da api mockada, sempre quando fechar e abrir o app e a escolha for mockada, a lista permanecerá, mas a partir do momento onde é clicada para a API Rest, o mockado sumirá,paara abrir oportunidades para testes "apagando" os posts existentes (Existia a possibilidade de deixar a lista do mockado não ser apagada, pois ambas APIs não tem relação e estão separadas em código e responsabilidades distintas.).
  - Enquanto a API REST estiver rodando em seu localhost, os dados não serão afetados e quaisquer criação se manterá até matar o processo do localhost.
 
 ### Utilização e Funcionalidades do APP
