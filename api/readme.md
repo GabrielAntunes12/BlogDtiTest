@@ -27,18 +27,25 @@ Este projeto é uma aplicação de blog simples em Go que permite criar e recupe
 
    Deve retornar `go version go1.22.2 linux/amd64` (ou similar).
 
+## Instalação do Go 1.22.2 no Windows
+
+1. Baixe o tarball do Go 1.22.2 para Windows em: [https://golang.org/dl/](https://golang.org/dl/)
+2. Execute o tarball.
+3. Verifique a instalação com:
+
+   go version
+
+   Deve retornar `go version go1.22.2 windows/amd64` (ou similar).
+
 ## Rodando a Aplicação
 
-1. Clone este repositório:
-
-   git clone https://github.com/seu-usuario/blog_project.git
-   cd blog_project
+1. Abra a pasta onde está os arquivos da API
 
 2. Execute a aplicação:
+  - go mod tidy
+  - go run main.go
 
-   go run main.go
-
-3. Acesse a aplicação no seu navegador em: [http://localhost:8080](http://localhost:8080)
+4. Acesse a aplicação no seu navegador em: [http://localhost:8080](http://localhost:8080)
 
 ## Endpoints
 
