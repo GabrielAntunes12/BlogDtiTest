@@ -28,3 +28,6 @@ Esse aplicativo foi desenvolvido a fins de concluir um teste exigido.
    - Os tratamentos de erros estão implementados no código para o melhor uso do usuario e a não quebra de experiencia. Tratamentos como de API não estão sendo detalhadas a nivel de code response (404, 401, 500...).
 5. Caso de Testes
    - Um teste unitario para testar uma função de formatar data no utils.
+6. Gradle
+   - Gradle está em Kts, devido o suporte recente da google e com as possibilidades de programação oferecidas por eles.
+   - Versões de dependencias em um script separado para melhor troca e visualização.
