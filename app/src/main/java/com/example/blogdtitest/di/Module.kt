@@ -1,6 +1,7 @@
 package com.example.blogdtitest.di
 
 import android.app.Application
+import android.content.SharedPreferences
 import com.example.blogdtitest.repository.BlogRepository
 import com.example.blogdtitest.service.BlogService
 import com.example.blogdtitest.viewmodel.MainActivityViewModel
@@ -57,8 +58,20 @@ val viewModelModule = module {
 }
 
 val repositoryModule = module {
-    fun provideUserRepository(api: BlogService): BlogRepository {
-        return BlogRepository(api)
+    fun provideUserRepository(api: BlogService, sharedPreferences: SharedPreferences): BlogRepository {
+        return BlogRepository(api, sharedPreferences)
     }
-    single { provideUserRepository(get()) }
+    single { provideUserRepository(get(), get()) }
+}
+
+
+val appModule = module {
+
+    single{
+        getSharedPrefs(androidApplication())
+    }
+
+}
+fun getSharedPrefs(androidApplication: Application): SharedPreferences{
+    return  androidApplication.getSharedPreferences("default",  android.content.Context.MODE_PRIVATE)
 }

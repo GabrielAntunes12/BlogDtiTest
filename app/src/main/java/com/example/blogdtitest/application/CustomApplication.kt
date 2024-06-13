@@ -2,6 +2,7 @@ package com.example.blogdtitest.application
 
 import android.app.Application
 import com.example.blogdtitest.di.apiModule
+import com.example.blogdtitest.di.appModule
 import com.example.blogdtitest.di.netModule
 import com.example.blogdtitest.di.repositoryModule
 import com.example.blogdtitest.di.viewModelModule
@@ -13,7 +14,7 @@ class CustomApplication : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@CustomApplication)
-            modules(listOf(netModule, apiModule, viewModelModule, repositoryModule))
+            modules(listOf(netModule, apiModule, viewModelModule, repositoryModule, appModule))
         }
     }
 }

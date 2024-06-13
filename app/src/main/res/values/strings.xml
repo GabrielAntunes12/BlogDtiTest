@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">BlogDtiTest</string>
+    <string name="default_value_title_post">Alem do Horizonte</string>
+    <string name="default_value_date_post">17-03-2024</string>
+    <string name="default_value_description_post">Descrição teste para visualização em tempo real no html.Descrição teste para visualização em tempo real no html.Descrição teste para visualização em tempo real no html.Descrição teste para visualização em tempo real no html.Descrição teste para visualização em tempo real no html.Descrição teste para visualização em tempo real no html.Descrição teste para visualização em tempo real no html.Descrição teste para visualização em tempo real no html.</string>
+    <string name="blog_app_title">Blog App</string>
+    <string name="post_details_title">Detalhes do Post</string>
+    <string name="title_example">Título</string>
+    <string name="title_data">Data</string>
+    <string name="desc_title">Descrição</string>
+    <string name="add_title_hint">Adicione o título</string>
+    <string name="add_post_title">Adicionar Post</string>
+    <string name="add_post_button_hint">Adicionar Post!</string>
+    <string name="add_desc_hint">Adicione o texto do post</string>
+    <string name="api_rest_button">Entrar com API REST</string>
 </resources>

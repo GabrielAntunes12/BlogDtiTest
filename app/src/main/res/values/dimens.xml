@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_large_dp">24dp</dimen>
+    <dimen name="default_medium_small_dp">16sp</dimen>
+    <dimen name="default_medium_dp">18dp</dimen>
+    <dimen name="default_smallest_dp">8dp</dimen>
+    <dimen name="default_medium_sp">18sp</dimen>
+    <dimen name="default_medium_small_sp">16sp</dimen>
+    <dimen name="default_large_sp">22sp</dimen>
+</resources>

@@ -6,12 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".ui.NewPostActivity">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/background_blog_second_design"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="BLOG APP"
+        android:layout_marginTop="@dimen/default_medium_dp"
+        android:text="@string/blog_app_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/default_medium_sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
-        android:padding="8dp"
+        android:padding="@dimen/default_medium_dp"
         android:src="@drawable/baseline_arrow_back_ios_new_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,8 +44,8 @@
         android:id="@+id/cardView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="8dp"
+        android:layout_margin="@dimen/default_medium_small_dp"
+        app:cardCornerRadius="@dimen/default_smallest_dp"
         app:layout_constraintBottom_toTopOf="@+id/addPostButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,8 +59,10 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="Adicionar Post"
+                android:layout_margin="@dimen/default_smallest_dp"
+                android:textSize="@dimen/default_medium_small_sp"
+                android:textStyle="bold"
+                android:text="@string/add_post_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -56,8 +72,10 @@
                 android:id="@+id/titleInsert"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:hint="Adicione o título"
+                android:layout_margin="@dimen/default_medium_small_dp"
+                android:padding="@dimen/default_medium_dp"
+                android:background="@drawable/background_input_fields"
+                android:hint="@string/add_title_hint"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -66,9 +84,11 @@
                 android:id="@+id/descInsert"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/default_medium_small_dp"
                 android:gravity="top"
-                android:hint="Adicione o texto do post"
+                android:padding="@dimen/default_medium_dp"
+                android:background="@drawable/background_input_fields"
+                android:hint="@string/add_desc_hint"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -83,11 +103,23 @@
         android:id="@+id/addPostButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Adicionar post!"
+        android:layout_margin="@dimen/default_medium_small_dp"
+        android:background="@drawable/background_button"
+        android:textSize="@dimen/default_medium_sp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:text="@string/add_post_button_hint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

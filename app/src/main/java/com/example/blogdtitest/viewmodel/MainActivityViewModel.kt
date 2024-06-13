@@ -16,15 +16,24 @@ class MainActivityViewModel(private val repository: BlogRepository) : ViewModel(
 
     fun retrieveList() {
         CoroutineScope(Dispatchers.Default).launch {
-            repository.retrieveList{list, message ->
-                when{
-                    list.isNullOrEmpty() ->{
-                        mSuccessRetrieveList.postValue(StatesRetrieveList.Error(message))
-                    }
-                    else ->{
-                        mSuccessRetrieveList.postValue(StatesRetrieveList.SuccessRetrieveList(list))
+            try {
+                repository.retrieveList { list, message ->
+                    when {
+                        list.isNullOrEmpty() -> {
+                            mSuccessRetrieveList.postValue(StatesRetrieveList.Error(message))
+                        }
+
+                        else -> {
+                            mSuccessRetrieveList.postValue(
+                                StatesRetrieveList.SuccessRetrieveList(
+                                    list
+                                )
+                            )
+                        }
                     }
                 }
+            }catch (e:Exception){
+                mSuccessRetrieveList.postValue(e.message?.let { StatesRetrieveList.Error(it) })
             }
         }
     }

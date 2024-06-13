@@ -6,12 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/background_blog_design"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:text="Blog App"
+        android:text="@string/blog_app_title"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/default_large_sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,20 +33,24 @@
         android:id="@+id/recyclerPosts"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="18dp"
+        android:layout_margin="@dimen/default_medium_dp"
         app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Adicionar Post"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="@dimen/default_large_dp"
+        android:background="@drawable/background_button"
+        android:text="@string/add_post_button_hint"
+        android:textSize="@dimen/default_medium_sp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/recyclerPosts"
+        app:layout_constraintStart_toStartOf="@+id/recyclerPosts" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
