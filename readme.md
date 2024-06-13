@@ -22,4 +22,6 @@ Esse aplicativo foi desenvolvido a fins de concluir um teste exigido.
 3. Jetpack Android
    - Foram utilizados alguns componentes do jetpack, como ViewBinding, AppCompat, optando também pela não utilização de Fragment, Navigation e ROOM, pelo tamanho do projeto a ser entregue.
 4. Tratamento de erro
-   - Os tratamentos de erros estão implementados no código para o melhor uso do usuario e a não quebra de experiencia. Tratamentos como de API não estão sendo detalhadas a nivel de code response (404, 401, 500...). 
+   - Os tratamentos de erros estão implementados no código para o melhor uso do usuario e a não quebra de experiencia. Tratamentos como de API não estão sendo detalhadas a nivel de code response (404, 401, 500...).
+5. Caso de Testes
+   - Um teste unitario para testar uma função de formatar data no utils.
