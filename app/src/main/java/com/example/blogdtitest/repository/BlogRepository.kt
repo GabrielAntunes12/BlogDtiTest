@@ -8,10 +8,9 @@ import com.example.blogdtitest.util.API_DECIDED_REST
 
 class BlogRepository(private val blogService: BlogService, private val srp: SharedPreferences) {
 
-    private var apiDecide = srp.getBoolean(API_DECIDED_REST, false)
     private val apiMocked = ApiMocked(srp)
     suspend fun retrieveList(result: (List<ItemPostData>?, String) -> Unit) {
-        if (apiDecide){
+        if (srp.getBoolean(API_DECIDED_REST, false)){
             val resultHere = blogService.getPosts()
             when (resultHere.isSuccessful) {
                 true -> {
@@ -26,7 +25,7 @@ class BlogRepository(private val blogService: BlogService, private val srp: Shar
     }
 
     suspend fun addPost(itemPostData: ItemPostData, result: (Boolean, String) -> Unit) {
-        if (apiDecide){
+        if (srp.getBoolean(API_DECIDED_REST, false)){
             val resultHere = blogService.publishPost(itemPostData)
             when (resultHere.isSuccessful) {
                 true -> {
